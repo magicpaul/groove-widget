@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)https://demo.workpal.eu/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- BEGIN GROOVE WIDGET CODE -->
+<script>
+  !function(e,t){if(!e.groove){var i=function(e,t){return Array.prototype.slice.call(e,t)},a={widget:null,loadedWidgets:{},classes:{Shim:null,Embeddable:function(){this._beforeLoadCallQueue=[],this.shim=null,this.finalized=!1;var e=function(e){var t=i(arguments,1);if(this.finalized){if(!this[e])throw new TypeError(e+"() is not a valid widget method");this[e].apply(this,t)}else this._beforeLoadCallQueue.push([e,t])};this.initializeShim=function(){a.classes.Shim&&(this.shim=new a.classes.Shim(this))},this.exec=e,this.init=function(){e.apply(this,["init"].concat(i(arguments,0))),this.initializeShim()},this.onShimScriptLoad=this.initializeShim.bind(this),this.onload=void 0}},scriptLoader:{callbacks:{},states:{},load:function(e,i){if("pending"!==this.states[e]){this.states[e]="pending";var a=t.createElement("script");a.id=e,a.type="text/javascript",a.async=!0,a.src=i;var s=this;a.addEventListener("load",(function(){s.states[e]="completed",(s.callbacks[e]||[]).forEach((function(e){e()}))}),!1);var n=t.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},addListener:function(e,t){"completed"!==this.states[e]?(this.callbacks[e]||(this.callbacks[e]=[]),this.callbacks[e].push(t)):t()}},createEmbeddable:function(){var t=new a.classes.Embeddable;return e.Proxy?new Proxy(t,{get:function(e,t){return e instanceof a.classes.Embeddable?Object.prototype.hasOwnProperty.call(e,t)||"onload"===t?e[t]:function(){e.exec.apply(e,[t].concat(i(arguments,0)))}:e[t]}}):t},createWidget:function(){var e=a.createEmbeddable();return a.scriptLoader.load("groove-script","https://1bb362f6-91bc-48f4-ac36-33aa3c6b8add.widget.cluster.groovehq.com/api/loader"),a.scriptLoader.addListener("groove-iframe-shim-loader",e.onShimScriptLoad),e}};e.groove=a}}(window,document);
+  window.groove.widget = window.groove.createWidget();
+  window.groove.widget.init('1bb362f6-91bc-48f4-ac36-33aa3c6b8add', {});
+</script>
+<!-- END GROOVE WIDGET CODE -->
+    <title>
+        DEMO WorkPal</title>
+	<script>
+        	CLIENT_NAME = "demo";
+        	BASE_URL = "https://demo.workpal.eu";
+        	DOMAIN_EXTENSION = "eu";
+	</script>
+        <meta name="robots" content="noindex">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+        <link rel="icon" href="https://demo.workpal.eu/images/favicon-orange.ico"><!-- 32×32 -->
+        <link rel="icon" href="https://demo.workpal.eu/images/favicon-orange.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="https://demo.workpal.eu/images/apple-orange.png"><!-- 180×180 -->
+
+        <link rel="stylesheet" href="./DEMO WorkPal_files/workpal.f8aeb06236a1d438.css">
+
+        <link rel="stylesheet" href="./DEMO WorkPal_files/custom.css">
+<script>
+function init() {
+  var btn = document.getElementById("help-nav");
+  var overlay = document.getElementById("overlay");
+  let isActive = false;
+  btn.addEventListener("click", function() {
+    if (!isActive){
+      addOverlay();
+      groove.widget.open()
+      isActive = !isActive;
+    }else{
+      removeOverlay();
+      groove.widget.close();
+      isActive = !isActive;
+    }
+  });
+}
+
+function addOverlay() {
+  var overlay = document.getElementById("overlay");
+  overlay.style.display = "block";
+}
+
+function removeOverlay() {
+  var overlay = document.getElementById("overlay");
+  overlay.style.display = "none";
+}
+
+window.onload = init;
+</script>
+<style>
+.overlay {
+  background: black;
+  opacity: 0.2;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+</style>
+</head>
+
+<body>
+    <div id="banner_container"></div>
+    <div class="firebasedashboard"></div>
+<nav class="topnav clearfix">
+    <div class="navcontainer">
+        <span id="desktop-home" class="client_name">DEMO</span>
+        <ul class="navigation">
+            <!--   check if user signed in is a client, and remove click event on workpal client name which would normally take users to welcome page -->
+            <li id="jobs-nav"><i class="icon_job"></i>Jobs</li><li id="manage-clients-nav"><i class="icon_client"></i>Clients</li><li id="quotes-nav"><i class="icon_quote"></i>Quotes</li><li id="scheduling-nav"><i class="icon_scheduling"></i>Scheduling</li><li id="assets-nav"><i class="icon_bag"></i>Assets</li><li id="fleet-nav"><i class="icon_fleet"></i>Fleet</li><li id="tasks-nav" )"=""><i class="icon_fe_code"></i>FE Codes</li><li id="parts-nav"><i class="icon_part"></i>Part Codes</li><li id="forms-nav"><i class="icon_form"></i>Forms</li><li id="helpers-nav" )"=""><i class="icon_helper"></i>Helpers</li><li id="tracking-nav"><i class="icon_tracking"></i>Tracking</li><li id="users-nav"><i class="icon_user"></i>Users</li><li id="invoicing-nav"><i class="icon_invoice"></i>Invoicing</li><li id="reporting-nav"><i class="icon_reporting"></i>Reporting</li><li id="documents-nav" )"=""><i class="icon_bag"></i>Documents</li><li id="help-nav" style="background: #ff511e;"><i class="fa-question-circle" onclick="toggleOverlay();"></i>Help</li></ul>
+        <div class="search">
+            <input type="search" class="searchfield" id="q" placeholder="Search Jobs">
+        </div>
+
+        <div id="userbar" class="user-bar">
+
+            <span class="menulogo"><img src="./DEMO WorkPal_files/wp_white.svg" width="30"></span>
+
+        </div>
+
+            </div>
+</nav>
+<script src="./DEMO WorkPal_files/topnav.js.download"></script>
+    <div class="page-container">
+	<div class="overlay" id="overlay"></div>
+        <div class="navigator" style=""></div>
+        <div id="appCanvas">
+            <div class="web-page" id="active-page" style="left: 0px; height: 832px; width: 1871px; opacity: 1;">
+            <!-- the main js for this page - loads initial data -->
+
+
+<div data-role="web-page" id="pgHome">
+    <img src="./DEMO WorkPal_files/new_wp_logo_white.svg" alt="WorkPal" height="40" id="logo">
+    <div class="client-area tilescanvas" style="height: 667px;">
+
+    <div class="wp-tile item jobtile" data-href="/pages/jobs/jobs.php" id="jobs_tile" data-search-context="jobs" data-search-text="Search Jobs" style="height: 217.333px; width: 217.333px; font-size: 35.888px;"><span><i class="icon_job"></i>Jobs</span></div><div class="wp-tile item clienttile" data-href="/pages/manage-clients/manage-clients.php" data-search-context="clients,sites" data-search-text="Search Clients and Sites" style="height: 217.333px; width: 217.333px; font-size: 35.888px;"><span><i class="icon_client"></i>Clients</span></div><div class="wp-tile item quotestile" data-href="/pages/quotes/quotes.php" data-search-context="quotes" data-search-text="Search Quotes" style="height: 217.333px; width: 217.333px; font-size: 35.888px;"><span><i class="icon_quote"></i>Quotes</span></div><div class="wp-tile item schedulingtile" data-href="/pages/schedule/schedule.php" data-search-context="jobs" data-search-text="Search Jobs" style="height: 217.333px; width: 217.333px; font-size: 35.888px;"><span><i class="icon_scheduling"></i>Scheduling</span></div><div class="wp-tile item assets_listtile" data-href="/pages/assets/assets.php" id="assets_tile" data-search-context="assets" data-search-text="Search Assets" style="height: 217.333px; width: 217.333px; font-size: 35.888px;"><span><i class="icon_bag"></i>Assets</span></div><div class="wp-tile item fleettile" data-href="/pages/fleet/fleet.php" data-search-context="fleet" data-search-text="Search Fleet" style="height: 217.333px; width: 217.333px; font-size: 35.888px;"><span><i class="icon_fleet"></i>Fleet</span></div><div class="wp-tile item taskstile" data-href="/pages/manage-fe-codes/manage-fe-codes.php" data-search-context="tasks" data-search-text="Search Task" style="height: 217.333px; width: 217.333px; font-size: 35.888px;"><span><i class="icon_fe_code"></i>FE Codes</span></div><div class="wp-tile item partstile" data-href="/pages/manage-parts-code/manage-parts-code.php" data-search-context="part_codes" data-search-text="Search Part Codes" style="height: 217.333px; width: 217.333px; font-size: 35.888px;"><span><i class="icon_part"></i>Part Codes</span></div><div class="wp-tile item formstile" data-href="/pages/forms/forms.php" data-search-context="forms" data-search-text="Search Forms" style="height: 217.333px; width: 217.333px; font-size: 35.888px;"><span><i class="icon_form"></i>Forms</span></div><div class="wp-tile item helperstile" data-href="/pages/manage-helpers/manage-helpers.php" data-search-context="helpers" data-search-text="Search Helpers" style="height: 217.333px; width: 217.333px; font-size: 35.888px;"><span><i class="icon_helper"></i>Helpers</span></div><div class="wp-tile item trackingtile" onclick="WorkPal.ui.loadTrackingPage()" style="height: 217.333px; width: 217.333px; font-size: 35.888px;"><span><i class="icon_tracking"></i>Tracking</span></div><div class="wp-tile item userstile" data-href="/pages/users/users.php" style="height: 217.333px; width: 217.333px; font-size: 35.888px;"><span><i class="icon_user"></i>Users</span></div><div class="wp-tile item invoicestile" data-href="/pages/invoices/invoices.php" data-search-context="invoices" data-search-text="Search Invoices" style="height: 217.333px; width: 217.333px; font-size: 35.888px;"><span><i class="icon_invoice"></i>Invoices</span></div><div class="wp-tile item reportingtile" data-href="/pages/reporting/reporting.php" style="height: 217.333px; width: 217.333px; font-size: 35.888px;"><span><i class="icon_reporting"></i>Reporting</span></div><div class="wp-tile item documents_librarytile" data-href="/pages/documents/document-library.php" data-search-context="documents" data-search-text="Search Documents" style="height: 217.333px; width: 217.333px; font-size: 35.888px;"><span><i class="icon_form"></i>Documents</span></div></div>
+</div></div><div class="web-page" id="inactive-page" style="height: 832px; width: 1871px; opacity: 0; left: -955.5px;"></div>
+            
+        </div>
+    </div>
+
+    <div class="action-sheet"></div>
+
+    <span class="page_label" style="display: none;"></span>
+
+    <div id="overlay"></div>
+
+    <div class="modal-alert">
+        <header>
+            <h2>Confirm</h2>
+        </header>
+        <p></p>
+        <footer>
+            <button>OK</button>
+        </footer>
+    </div>
+
+    <div class="alert" style="left: 700.5px; top: 262.333px;">
+        <span>This is an alert message</span>
+        <div class="timeoutbar"></div>
+    </div>
+
+    <div class="workpal_info_wrap">
+        <div class="info_box"></div>
+    </div>   
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><div class="stn-wdgt"><div class="css-alkhlc e1ib7hu90"></div></div></body></html>
