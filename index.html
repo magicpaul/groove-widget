@@ -43,6 +43,13 @@ function init() {
       isActive = !isActive;
     }
   });
+  overlay.addEventListener("click", function() {
+    if (isActive){
+      removeOverlay();
+      groove.widget.close()
+      isActive = !isActive;
+    }
+  });
 }
 
 function addOverlay() {
